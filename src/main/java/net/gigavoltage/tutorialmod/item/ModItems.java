@@ -15,10 +15,10 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
     public static RegistryObject<Item> ZIRCON = ITEMS.register("zircon",
-            () -> new Item(new Item.Properties().stacksTo(69)));
+            () -> new Item(new Item.Properties()));
 
     public static RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
-            () -> new Item(new Item.Properties().stacksTo(69)));
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

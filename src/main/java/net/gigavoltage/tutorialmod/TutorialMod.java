@@ -1,6 +1,7 @@
 package net.gigavoltage.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.gigavoltage.tutorialmod.block.ModBlocks;
 import net.gigavoltage.tutorialmod.item.ModCreativeModeTab;
 import net.gigavoltage.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -26,6 +27,7 @@ public class TutorialMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -40,9 +42,16 @@ public class TutorialMod {
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-        if (event.getTab() == ModCreativeModeTab.TUTORIAL_TAB)
+        if (event.getTab() == ModCreativeModeTab.TUTORIAL_TAB) {
             event.accept(ModItems.ZIRCON);
             event.accept(ModItems.RAW_ZIRCON);
+
+            event.accept(ModBlocks.ZIRCON_BLOCK);
+            event.accept(ModBlocks.ZIRCON_ORE);
+            event.accept(ModBlocks.DEEPSLATE_ZIRCON_ORE);
+            event.accept(ModBlocks.NETHERRACK_ZIRCON_ORE);
+            event.accept(ModBlocks.ENDSTONE_ZIRCON_ORE);
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
