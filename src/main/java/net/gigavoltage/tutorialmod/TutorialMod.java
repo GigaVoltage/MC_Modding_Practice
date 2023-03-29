@@ -45,6 +45,7 @@ public class TutorialMod {
         if (event.getTab() == ModCreativeModeTab.TUTORIAL_TAB) {
             event.accept(ModItems.ZIRCON);
             event.accept(ModItems.RAW_ZIRCON);
+            event.accept(ModItems.EIGHT_BALL);
 
             event.accept(ModBlocks.ZIRCON_BLOCK);
             event.accept(ModBlocks.ZIRCON_ORE);
