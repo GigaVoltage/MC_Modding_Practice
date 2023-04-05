@@ -53,6 +53,7 @@ public class TutorialMod {
             event.accept(ModBlocks.NETHERRACK_ZIRCON_ORE);
             event.accept(ModBlocks.ENDSTONE_ZIRCON_ORE);
             event.accept(ModBlocks.JUMPY_BLOCK);
+            event.accept(ModBlocks.ZIRCON_LAMP_BLOCK);
         }
     }
 

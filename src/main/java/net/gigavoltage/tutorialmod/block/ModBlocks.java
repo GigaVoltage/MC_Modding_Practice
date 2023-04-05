@@ -2,6 +2,7 @@ package net.gigavoltage.tutorialmod.block;
 
 import net.gigavoltage.tutorialmod.TutorialMod;
 import net.gigavoltage.tutorialmod.block.custom.JumpyBlock;
+import net.gigavoltage.tutorialmod.block.custom.ZirconLampBlock;
 import net.gigavoltage.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -43,6 +44,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ZIRCON_LAMP_BLOCK = registerBlock("zircon_lamp_block",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4).requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15:0)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
