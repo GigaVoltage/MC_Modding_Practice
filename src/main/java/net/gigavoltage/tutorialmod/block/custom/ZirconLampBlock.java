@@ -17,6 +17,7 @@ public class ZirconLampBlock extends Block {
 
     public ZirconLampBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.defaultBlockState().setValue(LIT, Boolean.valueOf(false)));
     }
 
     @Override

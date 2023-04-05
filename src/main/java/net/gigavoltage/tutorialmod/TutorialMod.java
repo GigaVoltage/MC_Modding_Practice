@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.gigavoltage.tutorialmod.block.ModBlocks;
 import net.gigavoltage.tutorialmod.item.ModCreativeModeTab;
 import net.gigavoltage.tutorialmod.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -46,6 +48,8 @@ public class TutorialMod {
             event.accept(ModItems.ZIRCON);
             event.accept(ModItems.RAW_ZIRCON);
             event.accept(ModItems.EIGHT_BALL);
+            event.accept(ModItems.BLUEBERRY);
+            event.accept(ModItems.BLUEBERRY_SEEDS);
 
             event.accept(ModBlocks.ZIRCON_BLOCK);
             event.accept(ModBlocks.ZIRCON_ORE);
@@ -54,6 +58,7 @@ public class TutorialMod {
             event.accept(ModBlocks.ENDSTONE_ZIRCON_ORE);
             event.accept(ModBlocks.JUMPY_BLOCK);
             event.accept(ModBlocks.ZIRCON_LAMP_BLOCK);
+
         }
     }
 
