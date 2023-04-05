@@ -52,6 +52,7 @@ public class TutorialMod {
             event.accept(ModBlocks.DEEPSLATE_ZIRCON_ORE);
             event.accept(ModBlocks.NETHERRACK_ZIRCON_ORE);
             event.accept(ModBlocks.ENDSTONE_ZIRCON_ORE);
+            event.accept(ModBlocks.JUMPY_BLOCK);
         }
     }
 
